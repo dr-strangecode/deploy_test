@@ -1,7 +1,7 @@
 require 'bundler/capistrano'
 
 set :application, "deploy_test"
-set :repository,  "git@github.com:dr-stangecode/deploy_test.git"
+set :repository,  "git@github.com:dr-strangecode/deploy_test.git"
 set :deploy_to, "/opt/numerex/rails/"
 
 set :scm, :git
