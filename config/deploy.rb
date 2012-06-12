@@ -23,7 +23,7 @@ namespace :deploy do
 
   desc "Create symlinks for shared image upload directories"
   task :create_symlinks do
-    run "ln -fs #{shared_path}/database.yml #{release_path}/config/database.yml"
+    run "ln -fs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
   end
 
   after 'deploy:update_code', 'deploy:create_symlinks'
