@@ -11,7 +11,7 @@ set :keep_releases, "4"
 set :use_sudo, false
 set :deploy_via, :copy
 set :copy_cache, false
-set :copy_exclude, ['.git']
+#set :copy_exclude, ['.git']
 set :user, 'numerex'
 
 namespace :deploy do
