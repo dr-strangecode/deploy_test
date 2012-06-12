@@ -1,4 +1,5 @@
 require 'bundler/capistrano'
+load 'deploy/assets'
 
 set :application, "deploy_test"
 set :repository,  "git@github.com:dr-strangecode/deploy_test.git"
@@ -29,7 +30,7 @@ namespace :deploy do
 end
 
 task :staging do
-  set :rails_env, 'loadtest'
+  set :rails_env, 'staging'
   set :branch, 'staging'
   role :web, "puppet-test.mrpbx.com"                          # Your HTTP server, Apache/etc
   role :app, "puppet-test.mrpbx.com"                          # This may be the same as your `Web` server
