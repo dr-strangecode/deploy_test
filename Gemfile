@@ -1,6 +1,9 @@
+if RUBY_VERSION =~ /1.9/
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
+end
+
 source 'https://rubygems.org'
-LANG="en_US.UTF-8"
-LC_ALL="en_US.UTF-8"
 
 gem 'rails', '3.2.5'
 gem 'mysql'
